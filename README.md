@@ -1,4 +1,4 @@
-# Mandrill Dot Net
+# Mandrill Dot Net [![Build Status](http://teamcity.codebetter.com/app/rest/builds/buildType:\(id:bt1136\)/statusIcon)](http://teamcity.codebetter.com/project.html?projectId=project415&guest=1)
 
 ## NuGet
 
@@ -53,11 +53,15 @@ Asychronous:
    6. List-Scheduled
    7. Cancel-Scheduled
    8. Reschedule
+   9. Content
  3. Rejects
    1. List
    2. Delete
  4. Templates
    1. Render
+   2. Add
+   3. Update
+	 4. Info
  5. Senders
    1. List
 	
@@ -69,12 +73,12 @@ Asychronous:
 
 #### Building the source
 
-The source can be built from the rake task `rake build` or using visual studio. If using rake, ensure `albacore`
-and `version_bumper` gems are installed. Rename `rakefile.config.example.rb` to `rakefile.config.rb`. 
-
 For running tests, ensure to rename `AppSettings.example.config` to `AppSettings.config` and 
 set your own Api Key in the test project. Tests can be executed from rake: `rake test` or from any nunit test runner
 tool.
+
+You will also need to create a test template in your Mandrill account. The template's html content must be set to '<span mc:edit="model1"></span>'.
+The template's name must match the TemplateExample setting in the AppSettings.config; 'Test' by default.
 
 #### Contributors
 

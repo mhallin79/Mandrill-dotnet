@@ -1,40 +1,35 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ErrorResponse.cs" company="">
+// <copyright file="Spf.cs" company="">
 //   
 // </copyright>
 // <summary>
-//   The error response.
+//   The spf.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Mandrill
+namespace Mandrill.Models
 {
     /// <summary>
-    ///     The error response.
+    ///     The spf.
     /// </summary>
-    public struct ErrorResponse
+    public class Spf
     {
-        #region Fields
+        #region Public Properties
 
         /// <summary>
-        ///     The code.
+        ///     Gets or sets the error.
         /// </summary>
-        public int code;
+        public string error { get; set; }
 
         /// <summary>
-        ///     The message.
+        ///     Gets or sets a value indicating whether valid.
         /// </summary>
-        public string message;
+        public bool valid { get; set; }
 
         /// <summary>
-        ///     The name.
+        ///     Gets or sets the valid_after.
         /// </summary>
-        public string name;
-
-        /// <summary>
-        ///     The status.
-        /// </summary>
-        public string status;
+        public string valid_after { get; set; }
 
         #endregion
     }

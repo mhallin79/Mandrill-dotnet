@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Mandrill.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,15 +32,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Mandrill.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Newtonsoft.Json.5.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="RestSharp, Version=104.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+      <HintPath>..\..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,20 +54,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="IMandrillApi.cs" />
     <Compile Include="Messages.cs" />
+    <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\Content.cs" />
+    <Compile Include="Models\Dkim.cs" />
     <Compile Include="Models\Info.cs" />
     <Compile Include="Models\EmailAddress.cs" />
     <Compile Include="MandrillApi.cs" />
     <Compile Include="Models\EmailMessage.cs" />
     <Compile Include="Models\EmailResult.cs" />
     <Compile Include="Models\ErrorResponse.cs" />
+    <Compile Include="Models\Recipient.cs" />
     <Compile Include="Models\RejectInfo.cs" />
     <Compile Include="Models\RenderedTemplate.cs" />
     <Compile Include="Models\ScheduledEmailResult.cs" />
     <Compile Include="Models\Search.cs" />
     <Compile Include="Models\SearchResult.cs" />
     <Compile Include="Models\Sender.cs" />
+    <Compile Include="Models\SenderDomain.cs" />
     <Compile Include="Models\SmtpEvent.cs" />
+    <Compile Include="Models\Spf.cs" />
+    <Compile Include="Models\SubaccountInfo.cs" />
     <Compile Include="Models\TemplateInfo.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Models\WebHookEvent.cs" />
@@ -73,6 +83,7 @@
     <Compile Include="Models\TemplateContent.cs" />
     <Compile Include="Rejects.cs" />
     <Compile Include="Senders.cs" />
+    <Compile Include="Subaccounts.cs" />
     <Compile Include="Tags.cs" />
     <Compile Include="Templates.cs" />
     <Compile Include="Urls.cs" />
